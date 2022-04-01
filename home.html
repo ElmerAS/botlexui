@@ -7,16 +7,25 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="https://d3bgpkig6acyf5.cloudfront.net/lex-web-ui-loader.min.js"></script>
-    <script>
-      var loaderOpts = {
-        baseUrl: "https://d3bgpkig6acyf5.cloudfront.net/",
-        shouldLoadMinDeps: true,
-      };
-      var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
-      loader.load().catch(function (error) {
-        console.error(error);
-      });
-    </script>
+    <script src="https://d38x9llgez44v.cloudfront.net/lex-web-ui-loader.min.js"></script>
+<script>
+  var loaderOpts = {
+    baseUrl: 'https://d38x9llgez44v.cloudfront.net/',
+    shouldLoadMinDeps: true
+  };
+  var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
+  var chatbotUiConfig = {
+          /* Example of setting session attributes on parent page
+          lex: {
+            sessionAttributes: {
+              userAgent: navigator.userAgent,
+              QNAClientFilter: ''
+            }
+          }
+          */
+        };
+  loader.load(chatbotUiConfig)
+    .catch(function (error) { console.error(error); });
+</script>
   </body>
 </html>
